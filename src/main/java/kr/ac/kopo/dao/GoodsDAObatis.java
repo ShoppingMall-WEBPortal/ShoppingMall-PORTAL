@@ -22,7 +22,7 @@ public class GoodsDAObatis {
 			goodsList = session.selectList("goods.dao.goodsDAO.selectAdios");
 			return goodsList;
 		} catch (Exception e) {
-			System.out.println("selectAll() 실패");
+			System.out.println("selectAdios() 실패");
 			e.printStackTrace();
 			return null;
 		}
@@ -35,7 +35,7 @@ public class GoodsDAObatis {
 			goodsList = session.selectList("goods.dao.goodsDAO.selectJeonBok");
 			return goodsList;
 		} catch (Exception e) {
-			System.out.println("selectAll() 실패");
+			System.out.println("selectJeonBok() 실패");
 			e.printStackTrace();
 			return null;
 		}
@@ -48,7 +48,7 @@ public class GoodsDAObatis {
 			goodsList = session.selectList("goods.dao.goodsDAO.selectStoneAIsland");
 			return goodsList;
 		} catch (Exception e) {
-			System.out.println("selectAll() 실패");
+			System.out.println("selectStoneAIsland() 실패");
 			e.printStackTrace();
 			return null;
 		}

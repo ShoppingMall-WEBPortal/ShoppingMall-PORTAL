@@ -15,6 +15,7 @@
 		<div class="logo"><a href="shoppingmallPortalWEB.do">SHOPPINGMALL.ORG</a></div>
 		<nav>
 			<ul>
+				<li><a href="SignUpForm.do">Sign Up</a></li>
 				<li><a href="http://localhost:8080/ShoppingMall-WEB/StoneAIsland.do">Stone AIsland</a></li>
 				<li><a href="http://172.31.9.177:8080/ShoppingMall/index.do">Adios</a></li>
 				<li><a href="http://172.31.9.178:8080/ShoppingMall/index.do">JeonBok</a></li>
@@ -40,7 +41,7 @@
 			
 			<c:forEach items="${ requestScope.goodsList3 }" var="goodsList3">
 				<div class="product-item">
-					<a href="#!">
+					<a href="/ShoppingMall-WEB/productSingle.do?itemCode=${ goodsList3.itemCode }">
 						<img src="${ goodsList3.itemAddr }" alt="Goods" style="width: 60%; height: 80%;">
 					</a>
 					<p class="product-name"><a href="#!">${ goodsList3.itemName }</a></p>

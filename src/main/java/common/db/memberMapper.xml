@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.dao.memberDAO">
+	
+	<insert id="insertMember" parameterType="kr.ac.kopo.vo.MemberVO">
+		INSERT INTO USERINFO@SHOPPINGMALL_LINK4 (id, password, name, phone, gender, postcode, home_address, detail_address, point, email)
+		VALUES (#{ id }, #{ password }, #{ name }, #{ phone }, #{ gender }, #{ postCode }, #{ home_address }, #{ detail_address }, 2000 , #{ email })
+	</insert>
+	
+</mapper>

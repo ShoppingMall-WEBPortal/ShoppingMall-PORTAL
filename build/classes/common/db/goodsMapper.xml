@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="goods.dao.goodsDAO">
+	
+	<select id="selectJeonBok" resultType="kr.ac.kopo.vo.GoodsVO">
+		SELECT item_code AS itemCode, item_name AS itemName, TO_NUMBER(item_price) AS itemPrice, item_img AS itemAddr
+  		  FROM item_info@SHOPPINGMALL_LINK3
+	</select>
+	
+	<select id="selectAdios" resultType="kr.ac.kopo.vo.GoodsVO">
+		SELECT a.sellcode AS itemCode, a.goodsname AS itemName, a.goodsprice AS itemPrice, b.picturepath AS itemAddr
+		  FROM (
+						SELECT sellcode, goodsname, goodsprice 
+						  FROM shop_tbl_goodsinfo@SHOPPINGMALL_LINK2  		
+				  		) a ,(shop_tbl_goodspicture@SHOPPINGMALL_LINK2) b
+		WHERE a.sellcode = b.sellcode
+		     AND b.picturetype = 'f'
+	</select>
+
+	<select id="selectStoneAIsland" resultType="kr.ac.kopo.vo.GoodsVO">
+		SELECT a.item_code AS itemCode, a.item_name AS itemName, a.item_price AS itemPrice, b.item_addr AS itemAddr
+		  FROM (
+						SELECT item_code, item_name, item_price
+						  FROM goodsinfo@SHOPPINGMALL_LINK4
+				  		) a, goodsdetailinfo@SHOPPINGMALL_LINK4 b
+		 WHERE a.item_code = b.item_code
+	</select>
+	
+</mapper>

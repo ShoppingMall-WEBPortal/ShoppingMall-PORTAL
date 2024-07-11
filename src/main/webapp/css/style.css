@@ -1,0 +1,154 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #000;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.cart-icon {
+	font-size: 20px;
+}
+
+.hero {
+	text-align: center;
+	background-color: #f5f5f5;
+	padding: 50px 20px;
+}
+
+.hero h1 {
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+
+.hero p {
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #A3A847;
+}
+
+.hero-images {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.hero-images img {
+	width: 200px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.products {
+	padding: 50px 20px;
+	background-color: #fff;
+}
+
+.products h2 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.product-item {
+	flex: 1 1 calc(22% - 40px); /* 4 items per row with 20px gap */
+	max-width: calc(22% - 40px);
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #f9f9f9;
+	box-sizing: border-box;
+}
+
+.product-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.product-label {
+	background-color: #A3A847;
+	color: #fff;
+	padding: 2px 5px;
+	font-size: 10px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+.product-name {
+	font-size: 13px;
+	margin: 10px 0;
+}
+
+.product-price {
+	font-size: 10px;
+	color: #333;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 14px;
+}
+
+/* Link styles */
+a {
+	color: inherit; /* Inherit color from parent element */
+	text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+	color: inherit; /* Maintain same color after being visited */
+	text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+	color: inherit; /* Maintain same color on hover */
+	text-decoration: none; /* Remove underline */
+}
+
+a:active {
+	color: inherit; /* Maintain same color when active (clicked) */
+	text-decoration: none; /* Remove underline */
+}
